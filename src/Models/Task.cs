@@ -13,7 +13,6 @@ public class Task
         Title = title;
         Description = description;
         Status = TaskStatus.Pendente;
-
     }
 
     public void Complete()
