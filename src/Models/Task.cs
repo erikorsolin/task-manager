@@ -1,11 +1,11 @@
 namespace TaskManager.Models;
 
 public class Task
-{   
+{
     public int Id { get; set; }
     public string Title { get; set; }
     public string Description { get; set; }
-    public TaskStatus Status {get; set; }
+    public TaskStatus Status { get; set; }
 
     public Task(int id, string title, string description)
     {
@@ -17,11 +17,11 @@ public class Task
 
     public void Complete()
     {
-        Status = TaskStatus.Concluida
+        Status = TaskStatus.Concluida;
     }
 
     public override string ToString()
     {
-        return $"{Id}: {Title} - {Status} \nDescription: {Description}";
+        return $"{Id}: {Title} - {Status} \nDescrição: {Description}";
     }
 }

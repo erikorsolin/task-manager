@@ -1,15 +1,16 @@
-using TaskManager.Models
+using TaskManager.Models;
+using TaskModel = TaskManager.Models.Task;
 
 namespace TaskManager.Controller;
 
 public class TaskManager
 {
-    private List<Task> tasks = new();
+    private List<TaskModel> tasks = new();
     private int nextId = 1;
 
     public void AddTask(string title, string description)
     {
-        tasks.Add(new Task(nextId++), title, description);
+        tasks.Add(new TaskModel(nextId++, title, description));
         Console.WriteLine("Tarefa adicionada com sucesso!");
     }
 
@@ -17,23 +18,23 @@ public class TaskManager
     {
         if (tasks.Count == 0)
         {
-            Console.WriteLine("Nenhuma tarefa cadastrada")
+            Console.WriteLine("Nenhuma tarefa cadastrada");
             return;
         }
 
         foreach (var task in tasks)
         {
-            Console.WriteLine(task)
+            Console.WriteLine($"\n{task}");
         }
     }
 
-    public void CompleteTask()
+    public void CompleteTask(int id) 
     {
-        var task = tasks.FirstOrDefault(t => t.Id == id);
-        if (task != null);
+        var task = tasks.FirstOrDefault(t => t.Id == id); 
+        if (task != null)
         {
             task.Complete();
-            Console.WriteLine("Tarefa Concluida!");
+            Console.WriteLine("Tarefa concluída!");
         }
         else
         {
@@ -47,11 +48,11 @@ public class TaskManager
         if (task != null)
         {
             tasks.Remove(task);
-            Console.Writeline("Tarefa removida!");
+            Console.WriteLine("Tarefa removida!"); 
         }
         else
         {
-            Console.WriteLine("Tarefa não encontrada.")
+            Console.WriteLine("Tarefa não encontrada.");
         }
     }
 }
