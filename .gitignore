@@ -1,0 +1,49 @@
+## Build results
+bin/
+obj/
+[Ll]og/
+*.log
+
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Auto-generated files
+*.generated.cs
+Generated_Code/
+
+## Rider
+.idea/
+
+## Visual Studio Code
+.vscode/
+.history/
+
+## NuGet
+*.nupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## Dotnet tools
+*.dotnet-tools.json
+
+## ASP.NET
+wwwroot/node_modules/
+node_modules/
+
+## Logs
+*.log
+*.tlog
+
+## Resharper
+*.DotSettings.user
+
+## Others
+TestResults/
+*.vs/
+.vs/
+_ReSharper*/
