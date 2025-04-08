@@ -11,14 +11,14 @@ public class TaskManager
     public void AddTask(string title, string description)
     {
         tasks.Add(new TaskModel(nextId++, title, description));
-        Console.WriteLine("Tarefa adicionada com sucesso!");
+        Console.WriteLine("\nTarefa adicionada com sucesso!");
     }
 
     public void ListTasks()
     {
         if (tasks.Count == 0)
         {
-            Console.WriteLine("Nenhuma tarefa cadastrada");
+            Console.WriteLine("\nNenhuma tarefa cadastrada");
             return;
         }
 
@@ -34,11 +34,11 @@ public class TaskManager
         if (task != null)
         {
             task.Complete();
-            Console.WriteLine("Tarefa concluída!");
+            Console.WriteLine("\nTarefa concluída!");
         }
         else
         {
-            Console.WriteLine("Tarefa não encontrada.");
+            Console.WriteLine("\nTarefa não encontrada.");
         }
     }
 
@@ -48,11 +48,11 @@ public class TaskManager
         if (task != null)
         {
             tasks.Remove(task);
-            Console.WriteLine("Tarefa removida!"); 
+            Console.WriteLine("\nTarefa removida!"); 
         }
         else
         {
-            Console.WriteLine("Tarefa não encontrada.");
+            Console.WriteLine("\nTarefa não encontrada.");
         }
     }
 }
