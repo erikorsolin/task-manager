@@ -1,20 +1,16 @@
-# Ignora arquivos de build e configurações locais
 bin/
 obj/
 *.user
 *.suo
 *.csproj.user
 
-# Ignora arquivos temporários e cache
 .vscode/
 *.log
 *.tmp
 *.db
 *.sqlite
 
-# Ignora arquivos de sistema
 .DS_Store
 Thumbs.db
 
-# Ignora dados locais, se for usar volume separado
 data/
