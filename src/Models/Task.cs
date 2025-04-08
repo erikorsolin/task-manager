@@ -12,12 +12,26 @@ public class TaskModel
         Id = id;
         Title = title;
         Description = description;
-        Status = TaskStatus.Pendente;
+        Status = TaskStatus.backlog;
     }
 
-    public void Complete()
+    public void MoveTo(int column)
     {
-        Status = TaskStatus.Concluida;
+        switch (column)
+            {
+                case "1":
+                    Status = TaskStatus.backlog;
+                    break;
+                case "2":
+                    Status = TaskStatus.progress;
+                    break;
+                case "3":
+                    Status = TaskStatus.canceled;
+                    break;
+                case "4":
+                    Status = TaskStatus.done;
+                    break;
+            }
     }
 
     public override string ToString()
