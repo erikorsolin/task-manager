@@ -12,7 +12,7 @@ public class TaskModel
         Id = id;
         Title = title;
         Description = description;
-        Status = TaskStatus.backlog;
+        Status = TaskStatus.Backlog;
     }
 
     public void MoveTo(int column)
