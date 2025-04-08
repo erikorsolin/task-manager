@@ -1,5 +1,4 @@
 using TaskManager.Models;
-using TaskModel = TaskManager.Models.Task;
 
 namespace TaskManager.Controller;
 

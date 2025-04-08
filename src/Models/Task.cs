@@ -1,13 +1,13 @@
 namespace TaskManager.Models;
 
-public class Task
+public class TaskModel
 {
     public int Id { get; set; }
     public string Title { get; set; }
     public string Description { get; set; }
     public TaskStatus Status { get; set; }
 
-    public Task(int id, string title, string description)
+    public TaskModel(int id, string title, string description)
     {
         Id = id;
         Title = title;
