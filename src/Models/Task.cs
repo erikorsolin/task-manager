@@ -19,17 +19,17 @@ public class TaskModel
     {
         switch (column)
             {
-                case "1":
-                    Status = TaskStatus.backlog;
+                case 1:
+                    Status = TaskStatus.Backlog;
                     break;
-                case "2":
-                    Status = TaskStatus.progress;
+                case 2:
+                    Status = TaskStatus.Progress;
                     break;
-                case "3":
-                    Status = TaskStatus.canceled;
+                case 3:
+                    Status = TaskStatus.Canceled;
                     break;
-                case "4":
-                    Status = TaskStatus.done;
+                case 4:
+                    Status = TaskStatus.Done;
                     break;
             }
     }
