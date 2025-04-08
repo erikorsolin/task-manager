@@ -10,7 +10,7 @@ class Program
     {
         while (true)
         {
-            Console.WriteLine("\n📌 GERENCIADOR DE TAREFAS 📌");
+            Console.WriteLine("\nGERENCIADOR DE TAREFAS");
             Console.WriteLine("1. Adicionar Tarefa");
             Console.WriteLine("2. Listar Tarefas");
             Console.WriteLine("3. Concluir Tarefa");
