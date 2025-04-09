@@ -1,4 +1,4 @@
-# Task Manager
+# Task Manager (⚠️ In progress)
 
 A productivity-focused task manager built in C# that organizes tasks in a Kanban-style workflow. This project is evolving from a command-line application to a fully functional RESTful API, allowing integration with other systems and interfaces.
 
@@ -7,7 +7,7 @@ A productivity-focused task manager built in C# that organizes tasks in a Kanban
 - **Command-line Interface**: Manage tasks directly from the terminal.
 - **Kanban Workflow**: Organize tasks into categories like "To Do", "In Progress", and "Done".
 - **Data Persistence**: Store tasks using SQLite and Entity Framework Core.
-- **RESTful API (In Progress)**:
+- **RESTful API**:
   - Endpoints for task management (CRUD operations).
   - Support for task filtering by status and priority.
   - Secure endpoints with JWT authentication (planned).
@@ -20,8 +20,8 @@ A productivity-focused task manager built in C# that organizes tasks in a Kanban
 - **Entity Framework Core**: ORM for database interaction.
 - **SQLite**: Lightweight relational database.
 - **Docker**: Containerization for deployment.
-- **Swagger**: Documentation for API endpoints (planned).
-- **JWT**: Authentication for securing endpoints (planned).
+- **Swagger**: Documentation for API endpoints.
+- **JWT**: Authentication for securing endpoints.
 
 ## Status
 
@@ -72,7 +72,7 @@ This project is under active development. The CLI application is complete, and t
    docker run -p 8080:80 task-manager
    ```
 
-## API Endpoints (Planned)
+## API Endpoints
 
 - `GET /tasks`: Retrieve all tasks.
 - `POST /tasks`: Create a new task.
