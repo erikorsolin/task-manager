@@ -5,7 +5,7 @@ A productivity-focused task manager built in C# that simulates a simple Kanban s
 ## Features
 
 - Command-line interface for task management.
-- Task organization in a Kanban-style workflow (e.g., To Do, In Progress, Done).
+- Task organization in a Kanban-style workflow (Backlog, Progress, Canceled, Done).
 - Data persistence using SQLite.
 - Database management through Entity Framework Core (EF Core).
 - Containerized with Docker for easy deployment and execution.
