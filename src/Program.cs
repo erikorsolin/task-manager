@@ -12,8 +12,8 @@ class Program
         {
             Console.WriteLine("\nGERENCIADOR DE TAREFAS");
             Console.WriteLine("1. Adicionar Tarefa");
-            Console.WriteLine("2. Listar Tarefas");
-            Console.WriteLine("3. Concluir Tarefa");
+            Console.WriteLine("2. Listar todas as tarefas");
+            Console.WriteLine("3. Mover Tarefa");
             Console.WriteLine("4. Remover Tarefa");
             Console.WriteLine("5. Sair");
             Console.Write("Escolha uma opção: ");
@@ -28,7 +28,7 @@ class Program
                     taskManager.ListTasks();
                     break;
                 case "3":
-                    CompleteTaskFlow();
+                    MoveTaskFlow();
                     break;
                 case "4":
                     RemoveTaskFlow();
@@ -51,16 +51,18 @@ class Program
         taskManager.AddTask(title, description);
     }
 
-    static void CompleteTaskFlow()
+    static void MoveTaskFlow()
     {
-        Console.Write("ID da tarefa a concluir: ");
-        if (int.TryParse(Console.ReadLine(), out int id))
+        Console.Write("Digite o ID e o destino: ");
+        ?string[] input = Console.ReadLine().Split(' ');
+        if (input.Length == 2 && int.TryParse(input[0], out int id))
         {
-            taskManager.CompleteTask(id);
+            string column = input[1].ToLower();
+            taskManager.MoveTask(id, column);
         }
         else
         {
-            Console.WriteLine("ID inválido.");
+            Console.WriteLine("Entrada inválida.");
         }
     }
 
