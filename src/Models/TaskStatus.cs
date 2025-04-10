@@ -2,6 +2,8 @@ namespace TaskManager.Models;
 
 public enum TaskStatus
 {
-    Pendente,
-    Concluida
+    Backlog,
+    Progress,
+    Canceled,
+    Done
 }

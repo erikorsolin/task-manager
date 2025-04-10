@@ -27,13 +27,13 @@ public class TaskManager
         }
     }
 
-    public void CompleteTask(int id) 
+    public void MoveTask(int id, string column)
     {
-        var task = tasks.FirstOrDefault(t => t.Id == id); 
+        var task = tasks.FirstOrDefault(t => t.Id == id);
         if (task != null)
         {
-            task.Complete();
-            Console.WriteLine("\nTarefa concluída!");
+            task.MoveTo(column);
+            Console.WriteLine("\nTarefa movida com sucesso!");
         }
         else
         {
