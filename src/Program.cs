@@ -13,9 +13,10 @@ class Program
             Console.WriteLine("\nGERENCIADOR DE TAREFAS");
             Console.WriteLine("1. Adicionar Tarefa");
             Console.WriteLine("2. Listar todas as tarefas");
-            Console.WriteLine("3. Mover Tarefa");
-            Console.WriteLine("4. Remover Tarefa");
-            Console.WriteLine("5. Sair");
+            Console.WriteLine("3. Filtrar tarefas por coluna");
+            Console.WriteLine("4. Mover Tarefa");
+            Console.WriteLine("5. Remover Tarefa");
+            Console.WriteLine("6. Sair");
             Console.Write("Escolha uma opção: ");
 
             string choice = Console.ReadLine();
@@ -28,12 +29,15 @@ class Program
                     taskManager.ListTasks();
                     break;
                 case "3":
-                    MoveTaskFlow();
+                    FilterTasksFlow();
                     break;
                 case "4":
-                    RemoveTaskFlow();
+                    MoveTaskFlow();
                     break;
                 case "5":
+                    RemoveTaskFlow();
+                    break;
+                case "6":
                     return;
                 default:
                     Console.WriteLine("Opção inválida.");
@@ -49,6 +53,13 @@ class Program
         Console.Write("Descrição: ");
         string description = Console.ReadLine(); 
         taskManager.AddTask(title, description);
+    }
+
+    static void FilterTasksFlow()
+    {
+        Console.Write("Digite a coluna (backlog, progress, canceled, done): ");
+        string column = Console.ReadLine();
+        taskManager.FilterTasks(column);
     }
 
     static void MoveTaskFlow()

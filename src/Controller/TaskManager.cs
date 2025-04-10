@@ -1,4 +1,5 @@
 using TaskManager.Models;
+using Status = TaskManager.Models.TaskStatus;
 
 namespace TaskManager.Controller;
 
@@ -22,6 +23,32 @@ public class TaskManager
         }
 
         foreach (var task in tasks)
+        {
+            Console.WriteLine($"\n{task}");
+        }
+    }
+
+    public void FilterTasks(string column)
+    {
+        var normalized = char.ToUpper(column[0]) + column.Substring(1).ToLower();
+
+        var validStatuses = Enum.GetNames(typeof(Status));
+        if (!validStatuses.Contains(normalized))
+        {
+            Console.WriteLine("\nStatus inválido. Use: Backlog, Progress, Done ou Canceled.");
+            return;
+        }
+
+        var parsedStatus = (Status)Enum.Parse(typeof(Status), normalized);
+        var filteredTasks = tasks.Where(t => t.Status == parsedStatus).ToList();
+
+        if (filteredTasks.Count == 0)
+        {
+            Console.WriteLine("Nenhuma tarefa nessa coluna.");
+            return;
+        }
+
+        foreach (var task in filteredTasks)
         {
             Console.WriteLine($"\n{task}");
         }
