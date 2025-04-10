@@ -15,20 +15,20 @@ public class TaskModel
         Status = TaskStatus.Backlog;
     }
 
-    public void MoveTo(int column)
+    public void MoveTo(string column)
     {
         switch (column)
             {
-                case 'backlog':
+                case "backlog":
                     Status = TaskStatus.Backlog;
                     break;
-                case 'progress':
+                case "progress":
                     Status = TaskStatus.Progress;
                     break;
-                case 'canceled':
+                case "canceled":
                     Status = TaskStatus.Canceled;
                     break;
-                case 'done':
+                case "done":
                     Status = TaskStatus.Done;
                     break;
             }

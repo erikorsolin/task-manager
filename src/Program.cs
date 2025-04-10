@@ -54,7 +54,7 @@ class Program
     static void MoveTaskFlow()
     {
         Console.Write("Digite o ID e o destino: ");
-        ?string[] input = Console.ReadLine().Split(' ');
+        string[] input = Console.ReadLine().Split(' ');
         if (input.Length == 2 && int.TryParse(input[0], out int id))
         {
             string column = input[1].ToLower();
