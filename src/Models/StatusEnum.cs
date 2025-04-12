@@ -1,6 +1,6 @@
 namespace TaskManager.Models;
 
-public enum TaskStatus
+public enum StatusEnum
 {
     Backlog,
     Progress,

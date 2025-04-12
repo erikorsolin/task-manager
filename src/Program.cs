@@ -1,7 +1,5 @@
 ﻿using TaskManager.Controller;
 
-using TaskManagerClass = TaskManager.Controller.TaskManager;
-
 class Program
 {
     static TaskManagerClass taskManager = new(); 
@@ -40,7 +38,7 @@ class Program
                 case "6":
                     return;
                 default:
-                    Console.WriteLine("Opção inválida.");
+                    Console.WriteLine("\nOpção inválida.");
                     break;
             }
         }
@@ -48,7 +46,7 @@ class Program
 
     static void AddTaskFlow()
     {
-        Console.Write("Título: ");
+        Console.Write("\nTítulo: ");
         string title = Console.ReadLine();
         Console.Write("Descrição: ");
         string description = Console.ReadLine(); 
@@ -57,14 +55,14 @@ class Program
 
     static void FilterTasksFlow()
     {
-        Console.Write("Digite a coluna (backlog, progress, canceled, done): ");
+        Console.Write("\nDigite a coluna (backlog, progress, canceled, done): ");
         string column = Console.ReadLine();
         taskManager.FilterTasks(column);
     }
 
     static void MoveTaskFlow()
     {
-        Console.Write("Digite o ID e o destino: ");
+        Console.Write("\nDigite o ID e o destino: ");
         string[] input = Console.ReadLine().Split(' ');
         if (input.Length == 2 && int.TryParse(input[0], out int id))
         {
@@ -73,20 +71,20 @@ class Program
         }
         else
         {
-            Console.WriteLine("Entrada inválida.");
+            Console.WriteLine("\nEntrada inválida.");
         }
     }
 
     static void RemoveTaskFlow()
     {
-        Console.Write("ID da tarefa a remover: ");
+        Console.Write("\nID da tarefa a remover: ");
         if (int.TryParse(Console.ReadLine(), out int id))
         {
             taskManager.RemoveTask(id);
         }
         else
         {
-            Console.WriteLine("ID inválido.");
+            Console.WriteLine("\nID inválido.");
         }
     }
 }

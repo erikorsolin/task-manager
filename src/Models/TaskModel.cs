@@ -5,14 +5,14 @@ public class TaskModel
     public int Id { get; set; }
     public string Title { get; set; }
     public string Description { get; set; }
-    public TaskStatus Status { get; set; }
+    public StatusEnum Status { get; set; }
 
     public TaskModel(int id, string title, string description)
     {
         Id = id;
         Title = title;
         Description = description;
-        Status = TaskStatus.Backlog;
+        Status = StatusEnum.Backlog;
     }
 
     public void MoveTo(string column)
@@ -20,20 +20,19 @@ public class TaskModel
         switch (column)
             {
                 case "backlog":
-                    Status = TaskStatus.Backlog;
+                    Status = StatusEnum.Backlog;
                     break;
                 case "progress":
-                    Status = TaskStatus.Progress;
+                    Status = StatusEnum.Progress;
                     break;
                 case "canceled":
-                    Status = TaskStatus.Canceled;
+                    Status = StatusEnum.Canceled;
                     break;
                 case "done":
-                    Status = TaskStatus.Done;
+                    Status = StatusEnum.Done;
                     break;
             }
     }
-
     public override string ToString()
     {
         return $"{Id}: {Title} - {Status} \nDescrição: {Description}";
