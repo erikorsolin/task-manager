@@ -28,7 +28,13 @@ public class TaskManagerClass
     }
 
     public void FilterTasks(string column)
-    {
+    {   
+        if (string.IsNullOrEmpty(column))
+        {
+            Console.WriteLine("\nColuna inválida. Use: Backlog, Progress, Done ou Canceled.");
+            return;
+        }
+        
         var normalized = char.ToUpper(column[0]) + column.Substring(1).ToLower();
 
         var validStatuses = Enum.GetNames(typeof(StatusEnum));
