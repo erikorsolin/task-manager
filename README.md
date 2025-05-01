@@ -1,20 +1,16 @@
-# Task Manager (⚠️ In progress)
+# Task Manager 
 
-A productivity-focused task manager built in C# that organizes tasks in a Kanban-style workflow. This project is evolving from a command-line application.
+A simple task manager built in C# that organizes tasks in a Kanban-style workflow. This project is evolving from a command-line application.
 
 ## Features
 
 - **Command-line Interface**: Manage tasks directly from the terminal.
 - **Kanban Workflow**: Organize tasks into categories like "Backlog", "Progress", "Canceled" and "Done".
-- **Data Persistence**: Store tasks using SQLite and Entity Framework Core.
 
 ## Technologies Used
 
 - **C#**: Primary programming language.
-- **Entity Framework Core**: ORM for database interaction.
-- **SQLite**: Lightweight relational database.
 - **Docker**: Containerization for deployment.
-
 
 ## How to Run
 
@@ -40,7 +36,7 @@ A productivity-focused task manager built in C# that organizes tasks in a Kanban
    ```
 2. Run the container:
    ```bash
-   docker run -p task-manager
+   docker run -it task-manager
    ```
 
 ## Contribution
